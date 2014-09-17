@@ -11,4 +11,4 @@ main:
     mov ebx, 0x0    ; exit parameter 0 = no errors
     int 0x80        ; kernel do
     
-segment .data   ; for inizialised Data
+segment .data   ; for initialised Data
