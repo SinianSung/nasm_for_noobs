@@ -3,7 +3,7 @@
 ; date:			8.10.2014
 ; filename:		loop.nasm
 
-global: _start
+global _start
 
 
 section .text
@@ -28,7 +28,6 @@ printMessage:
 	jnz printMessage	; jump to the top if counter is not zero
 	jmp exit			; only if necessary
 		
-
 exit:					; exit gracefully
 	
 	mov eax, 0x01
