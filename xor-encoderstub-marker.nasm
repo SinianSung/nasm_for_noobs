@@ -21,4 +21,4 @@ decode:
 
 call_decoder:
 	call decoder
-	Shellcode: db 0x9b,0xfa
+	Shellcode: db 0x9b,0xfa,xaa
