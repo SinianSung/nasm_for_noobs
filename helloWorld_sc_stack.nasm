@@ -13,17 +13,14 @@ _start:
 	xor eax, eax
 	mov al, 0x4
 	xor ebx, ebx
-	push ebx
+	push ebx					;terminating zeros on the stack
 	mov bl, 0x1
 
-	push 0x0a646c72
-	push 0x6f57206f
-	push 0x6c6c6548
+	push 0x0a646c72		; hello world in hex
+	push 0x6f57206f			; in reverse order
+	push 0x6c6c6548		; on the stack
 	
-	push 0x0a646c72
-	push 0x6f57206f
-	push 0x6c6c6548
-	mov ecx,esp
+	mov ecx,esp				; pointer to the string in ecx
 	mov dl, 0xc
 	int 0x80
 
