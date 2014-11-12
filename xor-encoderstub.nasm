@@ -1,4 +1,5 @@
-
+; author:	gregor luedi
+; filename: xor-encoderstub.nasm
 
 global _start
 
