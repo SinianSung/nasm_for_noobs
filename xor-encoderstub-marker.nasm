@@ -10,7 +10,7 @@ _start:
 decoder:
 	pop esi
 	xor ecx, ecx
-	mov cl, 25
+	mov cl, 2			; laenge des shellcodes
 	
 decode:
 	xor byte [esi], 0xaa

@@ -15,20 +15,20 @@ _start:					;entrypoint
 
 printMessage:
 
-	push ecx			; save to stack
-						; print the text to the console
+	push ecx				; save to stack
+								; print the text to the console
 	mov eax, 0x04
 	mov ebx, 0x01
 	mov ecx, message
 	mov edx, mlen
 	int 0x80
 		
-	pop ecx				; get countervalue from stack
-	dec ecx				; decrement counter
+	pop ecx					; get countervalue from stack
+	dec ecx					; decrement counter
 	jnz printMessage	; jump to the top if counter is not zero
-	jmp exit			; only if necessary
+	jmp exit				; only if necessary
 		
-exit:					; exit gracefully
+exit:							; exit gracefully
 	
 	mov eax, 0x01
 	mov ebx, 0x10
